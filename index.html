@@ -28,11 +28,15 @@
   <body>
     <main>
       <div class="card grid">
-        <img
+        <picture>
+          <source srcset="images/image-product-mobile.jpg" media="(max-width: 624px)">
+          <source srcset="images/image-product-desktop.jpg" media="(min-width: 625px)">
+          <img
           class="card__img"
           src="images/image-product-desktop.jpg"
           alt="Photo of a Chanel perfurm"
-        />
+          />
+        </picture>
         <div class="card__content">
           <div class="card__content__main">
             <div class="card__content_main__title">
