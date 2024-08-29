@@ -1,0 +1,208 @@
+/* =================== */
+/* Colors and Spacing System */
+/* =================== */
+
+:root {
+  /* Brand colors */
+  --aquamarine-800: #1a4032;
+  --aquamarine-500: #3d8168;
+  /* Neutral colors */
+  --gunmental: #1c232b;
+  --aurometal: #6c7289;
+  /* Background */
+  --cream: #f2eae2;
+  /* Shade */
+  --white: #fff;
+}
+
+/* =================== */
+/* Color Classes */
+/* =================== */
+
+.color-brand-dark {
+  color: var(--rose-800);
+}
+.color-brand-light {
+  color: var(--rose-50);
+}
+
+/* =================== */
+/* Typography Styles */
+/* =================== */
+
+.text-display {
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 100%;
+}
+
+.text-body {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 165%;
+}
+
+.text-btn {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 100%;
+}
+
+.text-overline {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 100%;
+  letter-spacing: 0.5rem;
+}
+
+.text-neutral {
+  color: var(--aurometal);
+}
+
+.text-neutral-dark {
+  color: var(--gunmental);
+}
+
+.text-brand {
+  color: var(--aquamarine-500);
+}
+
+/* =================== */
+/* Settings */
+/* =================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  background-color: var(--cream);
+}
+
+/* =================== */
+/* Reusable components */
+/* =================== */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* =================== */
+/* Styles */
+/* =================== */
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 60rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+}
+
+.card__img {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  width: 30rem;
+  height: 45rem;
+}
+
+.card__content {
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.card__content__main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.card__content_main__title {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card__content__pricing {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btn {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--aquamarine-500);
+  color: var(--white);
+  padding: 1.6rem;
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--aquamarine-800);
+}
+
+/* =================== */
+/* Responsiveness */
+/* =================== */
+
+@media (max-width: 624px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .card {
+    max-width: min-content;
+  }
+
+  .card__img {
+    object-fit: cover;
+    height: 24rem;
+    width: 34rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+  }
+
+  .card__content {
+    padding: 2.4rem;
+    gap: 2.2rem;
+  }
+
+  .card__content__main {
+    gap: 1.6rem;
+  }
+
+  .card__content_main__title {
+    gap: 1.2rem;
+  }
+}
