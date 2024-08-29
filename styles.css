@@ -102,6 +102,10 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
+.tracking-none {
+  letter-spacing: 0;
+}
+
 /* =================== */
 /* Styles */
 /* =================== */
